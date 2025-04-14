@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VehicLoop - Second-Hand Vehicle Marketplace</title>
+    <link rel="stylesheet" href="style.css"> html file 
+</head>
+<body>
+    <header>
+        <div class="slider-bg">
+            <h1 class="punchline">VehicLoop</h1>
+            <h6>Drive the Loop of Value</h6>
+
+        </div>
+        <button id="toggleMode">🌗</button>
+        <nav>
+            <ul> 
+                <li><a href="C:\Users\HP\OneDrive\Desktop\MP Scond Hand\sem8.html">Home</a></li>
+                <li><a href="#buy">Buy</a></li>
+                <li><a href="#sell">Sell</a></li>
+                <li><a href="#verify">Document Verification</a></li>
+                <li><a href="#insurance">Insurance</a></li>
+                <li><a href="second.streamlit/index.html">Loan Percentage</a></li>
+
+                <li><a href="hsrp.html">Apply For HSRP </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="buy">
+        <h2>Buy a Vehicle</h2>
+        <input type="text" id="searchBox" placeholder="Search Vehicles...">
+        <div class="vehicle-list" id="vehicleList">
+            <div class="vehicle-item">
+                <img src="car1.jpg" alt="Car 1">
+                <h3>Toyota Corolla 2018</h3>
+                <p>Price: ₹12,00,000</p>
+                <button>View Details</button>
+            </div>
+            <div class="vehicle-item">
+                <img src="car2.jpg" alt="Car 2">
+                <h3>Honda Civic 2020</h3>
+                <p>Price: ₹15,00,000</p>
+                <button>View Details</button>
+            </div>
+            <div class="vehicle-item">
+                <img src="car3.jpg" alt="Car 3">
+                <h3>Ford Focus 2017</h3>
+                <p>Price: ₹10,50,000</p>
+                <button>View Details</button>
+            </div>
+            <div class="vehicle-item">
+                <img src="bolero.jpg" alt="Car 4">
+                <h3>Bolero Pickup 2019</h3>
+                <p>Price: ₹14,00,000</p>
+                <button>View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sell">
+        <h2>Sell Your Vehicle</h2>
+        <form id="sellForm">
+            <input type="text" id="carModel" placeholder="Car Model" required>
+            <input type="number" id="carPrice" placeholder="Price (INR)" required>
+            <input type="text" id="vehicleYear" placeholder="Vehicle Year" required>
+            <input type="text" id="fuelType" placeholder="Fuel Type" required>
+            <input type="file" id="carImage" accept="image/*" required>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="sellMessage"></p>
+    </section>
+
+    <section id="verify">
+        <h2>Fake Document Detection</h2>
+        <p>Upload your vehicle documents to check for authenticity.</p>
+        <input type="file" accept="image/*" id="docUpload">
+        <button onclick="verifyDocument()">Verify</button>
+        <p id="verificationResult"></p>
+    </section>
+
+    <section id="insurance">
+        <h2>Check Insurance & Loan</h2>
+        <p>Enter your vehicle number to verify insurance and loan status.</p>
+        <input type="text" placeholder="Enter Vehicle Number" id="vehicleNumber">
+        <button onclick="checkInsurance()">Check</button>
+        <p id="insuranceResult"></p>
+        <br>
+        <a class="loan-link" href="second.streamlit/index.html">Check Loan Percentage by Vehicle Type</a>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

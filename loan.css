@@ -1,0 +1,217 @@
+/* Base Reset & Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f3f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+/* Punchline Animation with Extra Special Effects */
+.punchline {
+    font-size: 1.4rem;
+    color: #a9d9d8;
+    position: relative;
+    /* Combine scale, color change and glow effects */
+    animation: punchline-scale 3s ease-in-out infinite, punchline-color 5s ease-in-out infinite, punchline-glow 2s ease-in-out infinite alternate;
+}
+
+/* Scale & Opacity Animation */
+@keyframes punchline-scale {
+    0% { transform: scale(1); opacity: 1; }
+    25% { transform: scale(1.1); opacity: 0.9; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+    75% { transform: scale(1.1); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Color Transition Animation */
+@keyframes punchline-color {
+    0% { color: #a9d9d8; }
+    50% { color: #ff8c00; }
+    100% { color: #a9d9d8; }
+}
+
+/* Glowing Text Effect Animation */
+@keyframes punchline-glow {
+    0% { text-shadow: 0 0 5px #ff8c00, 0 0 10px #ff8c00; }
+    100% { text-shadow: 0 0 20px #ff8c00, 0 0 30px #ff8c00; }
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #222;
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00d8a7;
+}
+
+/* Main Section */
+section {
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 1200px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Vehicle List */
+.vehicle-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.vehicle-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 280px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.vehicle-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.vehicle-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.vehicle-item h3 {
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.vehicle-item p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0 0 15px;
+    padding: 0 15px;
+}
+
+/* Buttons */
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode header {
+    background: linear-gradient(to right, #0a0f1f, #142b34, #1f3a46);
+}
+
+body.dark-mode nav ul {
+    background-color: #333;
+}
+
+body.dark-mode nav ul li a {
+    color: #ddd;
+}
+
+body.dark-mode .vehicle-item {
+    background: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+body.dark-mode .vehicle-item:hover {
+    background: #444;
+}
+
+/* Chatbot */
+#chatbot {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 9999;
+
+}
+
+/* Enhanced Punchline Animation */
+.punchline {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #a9d9d8;
+    position: relative;
+    /* Combining scale, color transition, and glowing effects */
+    animation: punchScale 3s ease-in-out infinite, punchColor 5s ease-in-out infinite, punchGlow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes punchScale {
+    0%   { transform: scale(1); opacity: 1; }
+    25%  { transform: scale(1.1); opacity: 0.9; }
+    50%  { transform: scale(1.2); opacity: 0.8; }
+    75%  { transform: scale(1.1); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes punchColor {
+    0%   { color: #a9d9d8; }
+    50%  { color: #ff8c00; }
+    100% { color: #a9d9d8; }
+}
+
+@keyframes punchGlow {
+    0%   { text-shadow: 0 0 5px #ff8c00, 0 0 10px #ff8c00; }
+    100% { text-shadow: 0 0 20px #ff8c00, 0 0 30px #ff8c00; }
+}
