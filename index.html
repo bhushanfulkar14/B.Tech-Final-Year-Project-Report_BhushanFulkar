@@ -3,97 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VehicLoop - Second-Hand Vehicle Marketplace</title>
-    <link rel="stylesheet" href="style.css"> html file 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loan Prediction - Vehicle Finance Eligibility</title>
+    <link rel="stylesheet" href="loan.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="slider-bg">
-            <h1 class="punchline">VehicLoop</h1>
-            <h6>Drive the Loop of Value</h6>
-
+        <div class="header-content">
+            <h1>🚗 Vehicle Loan Prediction</h1>
+            <p>Find out if your vehicle is eligible for finance by filling out the details below.</p>
         </div>
-        <button id="toggleMode">🌗</button>
-        <nav>
-            <ul> 
-                <li><a href="C:\Users\HP\OneDrive\Desktop\MP Scond Hand\sem8.html">Home</a></li>
-                <li><a href="#buy">Buy</a></li>
-                <li><a href="#sell">Sell</a></li>
-                <li><a href="#verify">Document Verification</a></li>
-                <li><a href="#insurance">Insurance</a></li>
-                <li><a href="second.streamlit/index.html">Loan Percentage</a></li>
-
-                <li><a href="hsrp.html">Apply For HSRP </a></li>
-            </ul>
-        </nav>
     </header>
 
-    <section id="buy">
-        <h2>Buy a Vehicle</h2>
-        <input type="text" id="searchBox" placeholder="Search Vehicles...">
-        <div class="vehicle-list" id="vehicleList">
-            <div class="vehicle-item">
-                <img src="car1.jpg" alt="Car 1">
-                <h3>Toyota Corolla 2018</h3>
-                <p>Price: ₹12,00,000</p>
-                <button>View Details</button>
-            </div>
-            <div class="vehicle-item">
-                <img src="car2.jpg" alt="Car 2">
-                <h3>Honda Civic 2020</h3>
-                <p>Price: ₹15,00,000</p>
-                <button>View Details</button>
-            </div>
-            <div class="vehicle-item">
-                <img src="car3.jpg" alt="Car 3">
-                <h3>Ford Focus 2017</h3>
-                <p>Price: ₹10,50,000</p>
-                <button>View Details</button>
-            </div>
-            <div class="vehicle-item">
-                <img src="bolero.jpg" alt="Car 4">
-                <h3>Bolero Pickup 2019</h3>
-                <p>Price: ₹14,00,000</p>
-                <button>View Details</button>
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="form-container">
+            <form id="loan-form">
+                <!-- Vehicle Details Section -->
+                <div class="form-section">
+                    <h3>Vehicle Details</h3>
+                    <label for="vehicle-type">Vehicle Type</label>
+                    <select id="vehicle-type">
+                        <option value="car">Car</option>
+                        <option value="bike">Bike</option>
+                        <option value="truck">Truck</option>
+                        <option value="suv">SUV</option>
+                        <option value="van">Van</option>
+                    </select>
+
+                    <label for="vehicle-brand">Vehicle Brand</label>
+                    <select id="vehicle-brand">
+                        <option value="maruti">Maruti</option>
+                        <option value="honda">Honda</option>
+                        <option value="tata">Tata</option>
+                        <option value="hyundai">Hyundai</option>
+                        <option value="ford">Ford</option>
+                    </select>
+
+                    <label for="vehicle-price">Vehicle Price (INR)</label>
+                    <input type="number" id="vehicle-price" required />
+
+                    <label for="vehicle-mileage">Mileage (km/l)</label>
+                    <input type="number" id="vehicle-mileage" required />
+                </div>
+
+                <!-- Buyer Details Section -->
+                <div class="form-section">
+                    <h3>Buyer Details</h3>
+                    <label for="buyer-income">Buyer Income (INR)</label>
+                    <input type="number" id="buyer-income" required />
+
+                    <label for="employment-type">Employment Type</label>
+                    <select id="employment-type">
+                        <option value="salaried">Salaried</option>
+                        <option value="self-employed">Self-employed</option>
+                        <option value="farmer">Farmer</option>
+                    </select>
+
+                    <label for="loan-history">Loan History</label>
+                    <select id="loan-history">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Predict Eligibility</button>
+            </form>
+
+            <!-- Prediction Result -->
+            <div id="result" class="result">
+                <!-- Prediction result will be displayed here -->
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="sell">
-        <h2>Sell Your Vehicle</h2>
-        <form id="sellForm">
-            <input type="text" id="carModel" placeholder="Car Model" required>
-            <input type="number" id="carPrice" placeholder="Price (INR)" required>
-            <input type="text" id="vehicleYear" placeholder="Vehicle Year" required>
-            <input type="text" id="fuelType" placeholder="Fuel Type" required>
-            <input type="file" id="carImage" accept="image/*" required>
-            <button type="submit">Submit</button>
-        </form>
-        <p id="sellMessage"></p>
-    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Vehicle Loan Predictor. All rights reserved.</p>
+            <p>Created by Bhushan Fulkar | <a href="bhushanfulkar7@email.com">Contact</a></p>
+        </div>
+    </footer>
 
-    <section id="verify">
-        <h2>Fake Document Detection</h2>
-        <p>Upload your vehicle documents to check for authenticity.</p>
-        <input type="file" accept="image/*" id="docUpload">
-        <button onclick="verifyDocument()">Verify</button>
-        <p id="verificationResult"></p>
-    </section>
-
-    <section id="insurance">
-        <h2>Check Insurance & Loan</h2>
-        <p>Enter your vehicle number to verify insurance and loan status.</p>
-        <input type="text" placeholder="Enter Vehicle Number" id="vehicleNumber">
-        <button onclick="checkInsurance()">Check</button>
-        <p id="insuranceResult"></p>
-        <br>
-        <a class="loan-link" href="second.streamlit/index.html">Check Loan Percentage by Vehicle Type</a>
-    </section>
-
-
-
-    <script src="script.js"></script>
+    <script src="loan.js"></script>
 </body>
 </html>
-
-
